@@ -1,0 +1,146 @@
+﻿
+@{
+    ViewData["Title"] = "studentForm";
+}
+
+<h1>studentForm</h1>
+@ViewData["Registration"]
+
+<table  style="width: 100%; ">
+
+
+    <tr>
+        <td style="vertical-align:middle">
+            <img src="~/images/school name.jpeg" height="60px" width="300px"/>
+            </td>
+        <td style="vertical-align:top">
+            <address class="font-monospace" style="text-align: right;">
+                DHANUSH EDU INSTITUTIONS PVT.LTD <br>
+                dhanu.edu.ltd@email.com <br>
+                www.DhanushEdu.com <br>
+                ph. 040- 2631234567 <br>
+                209 Satyam Street,Ameerpet,HYD,TS,508244. <br>
+            </address>
+        </td>
+    </tr>
+</table>
+<form class="align-self-xl-stretch">  
+    <h2 align="center">STUDENT REGISTRATION FORM</h2>
+                    <details>
+                        <summary align="center" style="font-style:oblique;"> <b>Student Info </b> <hr> </summary>
+                        <table class="table table-bordered border-primary"  border="1" style="width: 100%;">
+                            <tr>
+                                <label for="validationServer01" class="form-label">Surname</label>
+                                <input type="text" class="form-control is-valid" id="validationServer01" required>
+                            </tr>
+                            <tr>
+                                <td>Student Name :  </td>
+                                <td><input required type="text" class="txtNam"> </td>  <!--  <br> <sup>full name</sup> -->
+
+                                <td>Date Of Birth :</td>
+                                <td><input type="date" id="Dobid"></td>
+                            </tr>
+                            <tr>
+                                <td>RollNumber: </td>
+                                <td><input type="number" placeholder="ex:1244" id="noRoll"> </td>
+                                <td> Gender: </td>
+
+                                <td>
+                                    Female<input type="radio" value="F" name="rbGender"> Male<input type="radio" value="M" name="rbGender">
+                                    Transgender<input type="radio" value="T" name="rbGender">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td> Class :</td>
+                                <td>
+                                   <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="Standard">
+                                        <option value="select"> select class </option>
+                                        <option value="1"> Class 1 </option>
+                                        <option value="2"> Class 2 </option>
+                                        <option value="3"> Class 3 </option>
+                                        <option value="4"> Class 4 </option>
+                                        <option value="5"> Class 5 </option>
+                                        <option value="6"> Class 6 </option>
+                                        <option value="7"> Class 7 </option>
+                                        <option value="8"> Class 8 </option>
+                                        <option value="9"> Class 9 </option>
+                                        <option value="10">Class 10</option>
+                                    </select>
+                                </td>
+                                <td> Address:</td>
+                                <td> <input type="text" style="width: 87%;" class="txtAdrs"> </td>
+
+                            </tr>
+                        </table>
+
+                        <table class="table table-bordered border-primary" border="1" style="width: 100%;">
+
+                            <tr>
+                                <td>
+                                    <table border="1" style="width: 100%;">
+                                        <tr> <td colspan="7"> Marks Obtained:- </td></tr>
+                                        <tr>
+                                            <td>Hindi </td>
+                                            <td> <input type="text" id="txtHn"></td>
+                                            <td>English </td>
+                                            <td> <input type="number" id="txtEn"></td>
+                                            <td>Telugu </td>
+                                            <td> <input type="text" id="txtTe"></td>
+                                        </tr>
+                                        <tr>
+                                            <td> Mathematics</td>
+                                            <td> <input type="text" id="txtMt"></td>
+                                            <td>Science</td>
+                                            <td> <input type="text" id="txtSc"> </td>
+                                            <td>Social Studies</td>
+                                            <td> <input type="text" id="txtSS"></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="table table-bordered border-primary" align="center" style="width: 50%; text-align: center;">
+                            <tr>
+                                <td>
+                            <input type="button" name=""  class="btn btn-success" value="OK" onclick="btnSubmission1()">
+                            <input type="reset" name="" class=" btn btn-danger" value="Cancel">
+                                </td>
+                            </tr>
+                        </table>
+
+                    </details>
+                    <br>
+                    <details>
+                        <summary align="center" style="font-style:oblique;"> <b>Parents Info </b> <hr> </summary>
+                         <table class="table table-bordered border-primary"  border="1" style="width: 100%;">
+                            <tr>
+                                <td> Name:</td>
+                                <td><input type="text" class="txtNam"></td>
+                                <td>Relationship:</td>
+                                <td>
+                                    Father<input type="radio" value="F" name="relationrb">
+                                    Mother<input type="radio" value="M" name="relationrb">
+                                    Guardian<input type="radio" value="G" name="relationrb">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Emergency Contact:</td>
+                                <td> <input type="number" id="noCont"></td>
+                                <td>Permanent Address:</td>
+                                <td> <input type="text" style="width: 87%;" class="txtAdrs"> </td>
+                            </tr>
+
+                        </table>
+                        <table class="table table-bordered border-primary" align="center" style="width: 50%; text-align: center;">
+                            <tr>
+                                <td>
+
+                            <input type="button" name=""  class="btn btn-outline-success" value="OK" onclick="return btnSubmission2()">
+                            <input type="reset" name="" class="btn btn-outline-danger" value="Cancel"><br> <br>
+                            <input type="submit" id="btnsmt" class="btn btn-primary" onclick="return btnSubmission2()" >
+                                </td>
+                            </tr>
+
+                        </table>
+                    </details>
+</form>

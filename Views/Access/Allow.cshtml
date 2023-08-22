@@ -1,0 +1,32 @@
+﻿@using MVCcore_App.Models;
+
+@{
+    Layout = null;
+}
+@model LoginTable         
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Allow</title>
+</head>
+<body>
+    <form method="post" asp-controller="Access" asp-action="Allow" style="text-align:center">
+        <div>
+            <label asp-for="UserName">  <input asp-for="UserName" type="text" placeholder="username" /> </label>
+        </div>
+        <div>
+            <label asp-for="Password"> <input type="password" asp-for="Password" placeholder="password" /> </label>
+        </div>
+        <div>
+
+            <input type="checkbox" asp-for="StayLoggedIn" />
+            <label asp-for="StayLoggedIn"></label>
+        </div>
+        <br />
+        <div> <input type="submit" value="Login" class="btn btn-primary" /> </div>
+        @ViewData["show"]
+    </form>
+</body>
+</html>

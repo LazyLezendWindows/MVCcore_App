@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewData["Title"] = "AddStudent";
+}
+@model MVCcore_App.Models.DTO.StudentDTO;
+<h1>AddStudent</h1> 
+
+<form method="post"  asp-controller="Student">
+<div class="container" >
+
+    <table class="table border-1" width="100%" > 
+            @*<tr>
+                <td> <label asp-for="RollNo"></label> </td>
+                <td><input type="text" asp-for="RollNo" /> </td>
+      </tr>*@
+
+       <tr>
+       <td> <label asp-for="StudentName"> </label> </td>
+                <td>   <input type="text" asp-for="StudentName" /> </td>
+     
+      </tr>
+
+            <tr><td> <label asp-for="Age"> </label> </td> <td> <input type="text" asp-for="Age" /> </td></tr>
+            <tr><td> <label asp-for="DoB"> </label> </td> <td> <input type="text" asp-for="DoB" /> </td></tr>
+            <tr><td> <label asp-for="Gender"> </label> </td> <td> <input type="text" asp-for="Gender" /> </td></tr>
+            <tr><td> <label asp-for="Address"> </label> </td> <td><input type="text" asp-for="Address" /> </td></tr>
+            <tr><td> <label asp-for="City"> </label> </td> <td><input type="text" asp-for="City" /> </td></tr>
+            <tr><td> <label asp-for="State"> </label> </td> <td><input type="text" asp-for="State" /> </td></tr>
+            <tr><td> <label asp-for="Country"> </label></td> <td> <input type="text" asp-for="Country" /> </td></tr>
+      </table>
+
+    </div>
+    <div  style="text-align:center;vertical-align:middle"><input type="submit" value="Ok" class="btn btn-primary" > </div>
+    <div class="alert-success">@ViewData["Msg"]</div>
+</form>  
